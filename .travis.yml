@@ -30,12 +30,15 @@ install:
   - cd Fast-RTPS
   - echo "export FASTRTPSHOME=${PWD}" >> ~/.bashrc
   - echo "export PATH=$PATH:${PWD}/fastrtpsgen/scripts" >> ~/.bashrc
+  - export FASTRTPSHOME=${PWD}
+  - export PATH=$PATH:${PWD}/fastrtpsgen/scripts
   - mkdir build -p && cd build
   - cmake ../ -DEPROSIMA_BUILD=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=install
   - make
   - make install
   - cd ../fastrtpsgen
   - gradle build
+  - source 
 
 script:
   - cd
