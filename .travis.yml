@@ -9,11 +9,11 @@ install:
   - sudo apt-get install -y cmake
   - sudo apt-get install -y software-properties-common
   - sudo apt-get install -y python-software-properties
-  - sudo add-apt-repository ppa:webupd8team/java
+  - spawn sudo add-apt-repository ppa:webupd8team/java
+  - expect "Press [ENTER] to continue or ctrl-c to cancel adding it"
+  - send "\n asd"
   - sudo apt-get update
-  - spawn apt-get install -y oracle-java8-installer
-  - expect "Press [ENTER] to continue or ctrl-c to cancel adding it\r\n"
-  - send "asdasd\r\n"
+  - sudo apt-get install -y oracle-java8-installer
   - sudo apt-get install -y libgtest-dev
   - cd /usr/src/gtest
   - sudo cmake .
