@@ -38,7 +38,6 @@ install:
   - make install
   - cd ../fastrtpsgen
   - gradle build
-  - source 
 
 script:
   - cd
