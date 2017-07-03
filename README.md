@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ajimal1992/fastrtps_minimal.svg?branch=master)](https://travis-ci.org/ajimal1992/fastrtps_minimal)
 ### Building application
 To build minimal application, first define the topic and its type
 ```
