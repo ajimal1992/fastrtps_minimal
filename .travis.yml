@@ -1,3 +1,4 @@
+
 sudo: required
 dist: trusty
 language: generic
@@ -38,6 +39,8 @@ install:
   - make install
   - cd ../fastrtpsgen
   - gradle build
+  - echo "This is the FRTPS dir:" $FASTRTPSHOME 
+  - echo "This is the PATH env:" $PATH 
 
 script:
   - cd
