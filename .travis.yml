@@ -28,10 +28,9 @@ install:
   - rm gradle-3.4-bin.zip
   - git clone --recursive https://github.com/eProsima/Fast-RTPS
   - cd Fast-RTPS
-  - echo "export FASTRTPSHOME=${PWD}" >> ~/.bashrc
-  - echo "export PATH=$PATH:${PWD}/fastrtpsgen/scripts" >> ~/.bashrc
-  - export FASTRTPSHOME=${PWD}
-  - export PATH=$PATH:${PWD}/fastrtpsgen/scripts
+  - sudo echo "export FASTRTPSHOME=${PWD}" >> /etc/environment
+  - sudo echo "export PATH=$PATH:${PWD}/fastrtpsgen/scripts" >> /etc/environment
+  - source /etc/environment
   - mkdir build -p && cd build
   - cmake ../ -DEPROSIMA_BUILD=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=install
   - make
