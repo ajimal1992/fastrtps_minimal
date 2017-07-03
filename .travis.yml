@@ -43,4 +43,4 @@ script:
   - cd
   - git clone https://github.com/ajimal1992/fastrtps_minimal.git
   - cd fastrtps_minimal
-  - sudo ./build.sh
+  - sudo ./compile.sh
