@@ -4,7 +4,7 @@ rm -r src/*.cxx
 rm -r include/*.h
 
 cd src
-~/Fast-RTPS/fastrtpsgen/scripts/fastrtpsgen -example x64Linux2.6gcc ../idl/*.idl
+fastrtpsgen -example x64Linux2.6gcc ../idl/*.idl
 rm make*
 
 cd ..
