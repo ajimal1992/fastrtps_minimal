@@ -5,7 +5,7 @@ language: generic
 compiler:
 - gcc
 
-install:
+before install:
   - sudo apt-get install -y cmake
   - sudo apt-get install -y software-properties-common
   - sudo apt-get install -y python-software-properties
@@ -41,7 +41,7 @@ install:
   - echo "This is the FRTPS dir:" $FASTRTPSHOME 
   - echo "This is the PATH env:" $PATH 
   - cat $FASTRTPSHOME/fastrtpsgen/resources/platforms
-  - fastrtpsgen -help
+  - fastrtpsgen
 
 script:
   - cd
